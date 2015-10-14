@@ -1,7 +1,7 @@
 {
   "name": "trash-cli",
   "version": "1.0.0",
-  "description": "Move files and directories to the trash",
+  "description": "Move files and folders to the trash",
   "license": "MIT",
   "repository": "sindresorhus/trash-cli",
   "author": {
@@ -38,16 +38,18 @@
     "dir",
     "directory",
     "directories",
+    "folder",
+    "folders",
     "xdg"
   ],
   "dependencies": {
     "meow": "^3.4.2",
-    "path-exists": "^2.0.0",
-    "trash": "^3.0.0",
+    "trash": "^3.1.0",
     "update-notifier": "^0.5.0"
   },
   "devDependencies": {
     "ava": "*",
+    "path-exists": "^2.0.0",
     "pify": "^2.2.0",
     "temp-write": "^2.0.1",
     "xo": "*"

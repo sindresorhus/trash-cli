@@ -1,6 +1,6 @@
 # [<img src="https://cdn.rawgit.com/sindresorhus/trash/1cdbd660976d739eeb45447bb6b62c41ac4a3ecf/media/logo.svg" width="150" align="left" alt="trash-cli">](https://github.com/sindresorhus/trash)CLI [![Build Status](https://travis-ci.org/sindresorhus/trash-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/trash-cli)
 
-> Move files and directories to the trash
+> Move files and folders to the trash
 
 Works on OS X, Linux, and Windows.
 

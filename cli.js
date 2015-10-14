@@ -3,7 +3,6 @@
 'use strict';
 const updateNotifier = require('update-notifier');
 const meow = require('meow');
-const pathExists = require('path-exists');
 const trash = require('trash');
 
 const cli = meow(`
@@ -23,4 +22,4 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-trash(cli.input.filter(x => pathExists.sync(x)));
+trash(cli.input);
