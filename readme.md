@@ -20,13 +20,12 @@ $ npm install --global trash-cli
 $ trash --help
 
   Usage
-    $ trash <path> [...]
+    $ trash <path|glob> [...]
 
   Example
     $ trash unicorn.png rainbow.png
+    $ trash '*.png' '!unicorn.png'
 ```
-
-*Globbing support is left up to your shell, but `$ trash *.png` should expand to the above in most shells.*
 
 
 ## Tip
