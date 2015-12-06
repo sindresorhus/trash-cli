@@ -1,12 +1,10 @@
-import childProcess from 'child_process';
 import test from 'ava';
-import pify from 'pify';
 import tempWrite from 'temp-write';
 import pathExists from 'path-exists';
+import execa from 'execa';
 
-test('main', async t => {
+test(async t => {
 	const filename = tempWrite.sync('foo');
-	await pify(childProcess.execFile)('./cli.js', [filename], {cwd: __dirname});
+	await execa('./cli.js', [filename]);
 	t.false(pathExists.sync(filename));
-	t.end();
 });

@@ -8,7 +8,7 @@ const cli = meow(`
 	Usage
 	  $ trash <path|glob> [...]
 
-	Example
+	Examples
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
 `, {
