@@ -40,6 +40,7 @@ Add `alias t=trash` to your `.zshrc`/`.bashrc` to reduce typing: `$ t unicorn.pn
 
 - [trash](https://github.com/sindresorhus/trash) - API for this module
 - [empty-trash-cli](https://github.com/sindresorhus/empty-trash-cli) - Empty the trash
+- [del-cli](https://github.com/sindresorhus/del-cli) - Delete files and folders
 
 
 ## License
