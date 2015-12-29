@@ -30,7 +30,7 @@ $ trash --help
 
 ## Tip
 
-Add `alias t=trash` to your `.zshrc`/`.bashrc` to reduce typing: `$ t unicorn.png`.
+Add `alias rm=trash` to your `.zshrc`/`.bashrc` to reduce typing & safely trash files: `$ rm unicorn.png`.
 
 
 ## [FAQ](https://github.com/sindresorhus/trash#faq)

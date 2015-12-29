@@ -12,7 +12,9 @@ const cli = meow(`
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
 `, {
-	string: ['_']
+	string: ['_'],
+	// ignore all flags of `rm` program
+	boolean: ['r', 'f', 'i', 'd', 'P', 'R', 'v', 'W']
 });
 
 updateNotifier({pkg: cli.pkg}).notify();
