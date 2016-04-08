@@ -45,4 +45,4 @@ Add `alias rm=trash` to your `.zshrc`/`.bashrc` to reduce typing & safely trash 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

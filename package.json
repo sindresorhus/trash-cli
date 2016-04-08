@@ -45,11 +45,11 @@
   "dependencies": {
     "meow": "^3.4.2",
     "trash": "^3.2.0",
-    "update-notifier": "^0.5.0"
+    "update-notifier": "^0.6.3"
   },
   "devDependencies": {
     "ava": "*",
-    "execa": "^0.1.0",
+    "execa": "^0.2.2",
     "path-exists": "^2.0.0",
     "temp-write": "^2.0.1",
     "xo": "*"
