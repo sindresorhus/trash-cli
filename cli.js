@@ -6,11 +6,12 @@ const trash = require('trash');
 
 const cli = meow(`
 	Usage
-	  $ trash <path|glob> [...]
+	  $ trash [flag] <path|glob> [...]
 
 	Examples
 	  $ trash unicorn.png rainbow.png
-	  $ trash '*.png' '!unicorn.png'
+		$ trash '*.png' '!unicorn.png'
+		$ trash -v unicorn.png rainbow.png
 `, {
 	string: ['_'],
 	// ignore all flags of `rm` program
@@ -24,4 +25,12 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-trash(cli.input);
+if (cli.flags.v) {
+	cli.input.forEach(entry => {
+		trash(entry).then(() => {
+			console.log(`Removed ${entry}`);
+		});
+	});
+} else {
+	trash(cli.input);
+}

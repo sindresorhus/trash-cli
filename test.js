@@ -14,3 +14,10 @@ test('ignore rm flags', async t => {
 	await execa('./cli.js', ['-rf', filename]);
 	t.false(pathExists.sync(filename));
 });
+
+test('verbose mode', async t => {
+	const filename = tempWrite.sync('foo');
+	const v = await execa('./cli.js', ['-v', filename]);
+	t.true(`Removed ${filename}` === v.stdout);
+	t.false(pathExists.sync(filename));
+});
