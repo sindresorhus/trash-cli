@@ -1,60 +1,57 @@
 {
-  "name": "trash-cli",
-  "version": "1.4.0",
-  "description": "Move files and folders to the trash",
-  "license": "MIT",
-  "repository": "sindresorhus/trash-cli",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "bin": {
-    "trash": "cli.js"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "cli.js"
-  ],
-  "keywords": [
-    "cli-app",
-    "cli",
-    "trash",
-    "recycle",
-    "bin",
-    "rm",
-    "rmrf",
-    "rimraf",
-    "remove",
-    "delete",
-    "del",
-    "file",
-    "files",
-    "dir",
-    "directory",
-    "directories",
-    "folder",
-    "folders",
-    "xdg"
-  ],
-  "dependencies": {
-    "meow": "^3.7.0",
-    "trash": "^4.0.0",
-    "update-notifier": "^1.0.2"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "execa": "^0.4.0",
-    "path-exists": "^3.0.0",
-    "temp-write": "^2.0.1",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "trash-cli",
+	"version": "1.4.0",
+	"description": "Move files and folders to the trash",
+	"license": "MIT",
+	"repository": "sindresorhus/trash-cli",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"bin": {
+		"trash": "cli.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"trash",
+		"recycle",
+		"bin",
+		"rm",
+		"rmrf",
+		"rimraf",
+		"remove",
+		"delete",
+		"del",
+		"file",
+		"files",
+		"dir",
+		"directory",
+		"directories",
+		"folder",
+		"folders",
+		"xdg"
+	],
+	"dependencies": {
+		"meow": "^3.7.0",
+		"trash": "^4.0.0",
+		"update-notifier": "^2.5.0"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"execa": "^1.0.0",
+		"path-exists": "^3.0.0",
+		"temp-write": "^3.4.0",
+		"xo": "^0.23.0"
+	}
 }
