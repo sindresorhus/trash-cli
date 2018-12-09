@@ -6,6 +6,8 @@ Works on macOS, Linux, and Windows.
 
 In contrast to [`rm`](http://en.wikipedia.org/wiki/Rm_(Unix)) which is [dangerous](http://docstore.mik.ua/orelly/unix3/upt/ch14_03.htm) and permanently delete files, this only moves them to the trash, which is much safer and reversible. I would also recommend reading my guide on [safeguarding `rm`](https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm).
 
+Accepts paths and [glob patterns](https://github.com/sindresorhus/globby#globbing-patterns).
+
 
 ## Install
 
