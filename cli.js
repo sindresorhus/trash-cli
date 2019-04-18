@@ -6,14 +6,14 @@ const trash = require('trash');
 
 const cli = meow(`
 	Usage
-	  $ trash <path|glob> [...]
+	  $ trash <path|glob> […]
 
 	Examples
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
 `, {
 	string: ['_'],
-	// ignore all flags of `rm` program
+	// Ignore all flags of `rm` program
 	boolean: ['r', 'f', 'i', 'd', 'P', 'R', 'v', 'W']
 });
 
