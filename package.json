@@ -35,7 +35,6 @@
 		"del",
 		"file",
 		"files",
-		"dir",
 		"directory",
 		"directories",
 		"folder",
@@ -44,14 +43,14 @@
 	],
 	"dependencies": {
 		"meow": "^3.7.0",
-		"trash": "^5.2.0",
-		"update-notifier": "^2.5.0"
+		"trash": "^6.0.0",
+		"update-notifier": "^3.0.0"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
 		"execa": "^1.0.0",
 		"path-exists": "^4.0.0",
-		"temp-write": "^3.4.0",
+		"temp-write": "^4.0.0",
 		"xo": "^0.24.0"
 	}
 }

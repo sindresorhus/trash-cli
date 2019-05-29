@@ -2,7 +2,7 @@
 
 > Move files and folders to the trash
 
-Works on macOS, Linux, and Windows.
+Works on macOS (10.12+), Linux, and Windows (8+).
 
 In contrast to [`rm`](http://en.wikipedia.org/wiki/Rm_(Unix)) which is [dangerous](http://docstore.mik.ua/orelly/unix3/upt/ch14_03.htm) and permanently delete files, this only moves them to the trash, which is much safer and reversible. I would also recommend reading my guide on [safeguarding `rm`](https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm).
 
@@ -22,7 +22,7 @@ $ npm install --global trash-cli
 $ trash --help
 
   Usage
-    $ trash <path|glob> [...]
+    $ trash <path|glob> […]
 
   Examples
     $ trash unicorn.png rainbow.png
@@ -43,8 +43,3 @@ Add `alias rm=trash` to your `.zshrc`/`.bashrc` to reduce typing & safely trash 
 - [trash](https://github.com/sindresorhus/trash) - API for this module
 - [empty-trash-cli](https://github.com/sindresorhus/empty-trash-cli) - Empty the trash
 - [del-cli](https://github.com/sindresorhus/del-cli) - Delete files and folders
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
