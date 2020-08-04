@@ -4,10 +4,11 @@
 	"description": "Move files and folders to the trash",
 	"license": "MIT",
 	"repository": "sindresorhus/trash-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"bin": {
 		"trash": "cli.js"
@@ -43,8 +44,7 @@
 	],
 	"dependencies": {
 		"meow": "^3.7.0",
-		"trash": "^6.0.0",
-		"update-notifier": "^3.0.0"
+		"trash": "^6.0.0"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 'use strict';
-const updateNotifier = require('update-notifier');
 const meow = require('meow');
 const trash = require('trash');
 
@@ -16,8 +15,6 @@ const cli = meow(`
 	// Ignore all flags of `rm` program
 	boolean: ['r', 'f', 'i', 'd', 'P', 'R', 'v', 'W']
 });
-
-updateNotifier({pkg: cli.pkg}).notify();
 
 if (cli.input.length === 0) {
 	console.error('Specify at least one path');
