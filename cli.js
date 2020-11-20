@@ -3,6 +3,25 @@
 const meow = require('meow');
 const trash = require('trash');
 
+// Ignore all flags of `rm` program.
+const ignoredFlags = [
+	'r',
+	'f',
+	'i',
+	'd',
+	'P',
+	'R',
+	'v',
+	'W'
+];
+
+const ignoredFlagsConfig = {};
+for (const flag of ignoredFlags) {
+	ignoredFlagsConfig[flag] = {
+		type: 'boolean'
+	};
+}
+
 const cli = meow(`
 	Usage
 	  $ trash <path|glob> […]
@@ -11,9 +30,9 @@ const cli = meow(`
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
 `, {
-	string: ['_'],
-	// Ignore all flags of `rm` program
-	boolean: ['r', 'f', 'i', 'd', 'P', 'R', 'v', 'W']
+	flags: {
+		...ignoredFlagsConfig
+	}
 });
 
 if (cli.input.length === 0) {

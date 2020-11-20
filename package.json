@@ -14,7 +14,7 @@
 		"trash": "cli.js"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -43,14 +43,14 @@
 		"xdg"
 	],
 	"dependencies": {
-		"meow": "^3.7.0",
-		"trash": "^6.0.0"
+		"meow": "^8.0.0",
+		"trash": "^7.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"execa": "^1.0.0",
+		"ava": "^2.4.0",
+		"execa": "^4.1.0",
 		"path-exists": "^4.0.0",
 		"temp-write": "^4.0.0",
-		"xo": "^0.24.0"
+		"xo": "^0.35.0"
 	}
 }
