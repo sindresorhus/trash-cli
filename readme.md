@@ -10,8 +10,8 @@ Accepts paths and [glob patterns](https://github.com/sindresorhus/globby#globbin
 
 ## Install
 
-```
-$ npm install --global trash-cli
+```sh
+npm install --global trash-cli
 ```
 
 ## Usage

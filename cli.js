@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const trash = require('trash');
+import process from 'node:process';
+import meow from 'meow';
+import trash from 'trash';
 
 // Ignore all flags of `rm` program.
 const ignoredFlags = [
@@ -12,13 +12,13 @@ const ignoredFlags = [
 	'P',
 	'R',
 	'v',
-	'W'
+	'W',
 ];
 
 const ignoredFlagsConfig = {};
 for (const flag of ignoredFlags) {
 	ignoredFlagsConfig[flag] = {
-		type: 'boolean'
+		type: 'boolean',
 	};
 }
 
@@ -30,9 +30,10 @@ const cli = meow(`
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
 `, {
+	importMeta: import.meta,
 	flags: {
-		...ignoredFlagsConfig
-	}
+		...ignoredFlagsConfig,
+	},
 });
 
 if (cli.input.length === 0) {
