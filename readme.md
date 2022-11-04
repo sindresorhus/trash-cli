@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/sindresorhus/trash@1cdbd660976d739eeb45447bb6b62c41ac4a3ecf/media/logo.svg" width="150" align="left" alt="trash-cli">](https://github.com/sindresorhus/trash)CLI
+# trash-cli
 
 > Move files and folders to the trash
 
