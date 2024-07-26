@@ -41,4 +41,4 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-trash(cli.input);
+await trash(cli.input);
