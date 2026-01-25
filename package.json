@@ -44,14 +44,15 @@
 		"xdg"
 	],
 	"dependencies": {
+		"globby": "^14.1.0",
 		"meow": "^14.0.0",
-		"trash": "^10.0.0"
+		"trash": "^10.1.0"
 	},
 	"devDependencies": {
 		"ava": "^6.4.1",
-		"execa": "^9.6.0",
+		"execa": "^9.6.1",
 		"path-exists": "^5.0.0",
-		"temp-write": "^6.0.0",
+		"temp-write": "^6.0.1",
 		"xo": "^1.2.3"
 	}
 }

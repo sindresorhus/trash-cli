@@ -14,3 +14,10 @@ test('ignore rm flags', async t => {
 	await execa('./cli.js', ['-rf', filename]);
 	t.false(await pathExists(filename));
 });
+
+test('verbose mode', async t => {
+	const filename = tempWrite.sync('foo');
+	const {stdout} = await execa('./cli.js', ['--verbose', filename]);
+	t.false(await pathExists(filename));
+	t.true(stdout.includes(filename));
+});

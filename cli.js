@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import process from 'node:process';
 import meow from 'meow';
+import {globby} from 'globby';
 import trash from 'trash';
 
 // Ignore all flags of `rm` program.
@@ -11,7 +12,6 @@ const ignoredFlags = [
 	'd',
 	'P',
 	'R',
-	'v',
 	'W',
 ];
 
@@ -26,6 +26,9 @@ const cli = meow(`
 	Usage
 	  $ trash <path|glob> […]
 
+	Options
+	  --verbose, -v  Print trashed items
+
 	Examples
 	  $ trash unicorn.png rainbow.png
 	  $ trash '*.png' '!unicorn.png'
@@ -33,6 +36,10 @@ const cli = meow(`
 	importMeta: import.meta,
 	flags: {
 		...ignoredFlagsConfig,
+		verbose: {
+			type: 'boolean',
+			shortFlag: 'v',
+		},
 	},
 });
 
@@ -41,4 +48,11 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-await trash(cli.input);
+const files = await globby(cli.input, {expandDirectories: false});
+await trash(files);
+
+if (cli.flags.verbose) {
+	for (const file of files) {
+		console.log(file);
+	}
+}
