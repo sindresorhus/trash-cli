@@ -48,7 +48,7 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-const files = await globby(cli.input, {expandDirectories: false});
+const files = await globby(cli.input, {expandDirectories: false, onlyFiles: false});
 await trash(files);
 
 if (cli.flags.verbose) {
