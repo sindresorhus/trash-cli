@@ -27,6 +27,7 @@ const cli = meow(`
 	  $ trash <path|glob> […]
 
 	Options
+	  --dot          Match dotfiles when using glob patterns (remember to quote the glob)
 	  --verbose, -v  Print trashed items
 
 	Examples
@@ -36,6 +37,9 @@ const cli = meow(`
 	importMeta: import.meta,
 	flags: {
 		...ignoredFlagsConfig,
+		dot: {
+			type: 'boolean',
+		},
 		verbose: {
 			type: 'boolean',
 			shortFlag: 'v',
@@ -48,7 +52,7 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-const files = await globby(cli.input, {expandDirectories: false, onlyFiles: false});
+const files = await globby(cli.input, {expandDirectories: false, onlyFiles: false, dot: cli.flags.dot});
 await trash(files);
 
 if (cli.flags.verbose) {
