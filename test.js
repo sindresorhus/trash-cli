@@ -40,6 +40,16 @@ test('dotfiles are not matched without dot flag', async t => {
 	fs.rmSync(directory, {recursive: true});
 });
 
+test('literal path with glob special characters', async t => {
+	const directory = path.join(import.meta.dirname, '_fixture_literal');
+	fs.mkdirSync(directory, {recursive: true});
+	const file = path.join(directory, 'foo[1].txt');
+	fs.writeFileSync(file, 'foo');
+	await execa('./cli.js', [file]);
+	t.false(await pathExists(file));
+	fs.rmSync(directory, {recursive: true});
+});
+
 test('verbose mode', async t => {
 	const filename = tempWrite.sync('foo');
 	const {stdout} = await execa('./cli.js', ['--verbose', filename]);
