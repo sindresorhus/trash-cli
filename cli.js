@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import fs from 'node:fs';
 import process from 'node:process';
 import meow from 'meow';
 import {globby} from 'globby';
@@ -52,7 +53,19 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-const files = await globby(cli.input, {expandDirectories: false, onlyFiles: false, dot: cli.flags.dot});
+const matches = await globby(cli.input, {expandDirectories: false, onlyFiles: false, dot: cli.flags.dot});
+
+// Include literal paths that exist but were not matched by globby. For example, Windows paths with `\` separators or filenames containing glob special characters.
+const literals = await Promise.all(cli.input.map(async filePath => {
+	try {
+		await fs.promises.lstat(filePath);
+		return filePath;
+	} catch {
+		return undefined;
+	}
+}));
+
+const files = [...new Set([...matches, ...literals.filter(Boolean)])];
 await trash(files);
 
 if (cli.flags.verbose) {
